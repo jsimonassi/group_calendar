@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 
         primarySwatch: MaterialColor(
-          0xffe55f48, // 0% comes in here, this will be color picked if no shade is selected when defining a Color property which doesn’t require a swatch.
+          0xff6529d4, // 0% comes in here, this will be color picked if no shade is selected when defining a Color property which doesn’t require a swatch.
           const <int, Color>{
             50: const Color(0xff000000),//10%
             100: const Color(0xff000000),//20%

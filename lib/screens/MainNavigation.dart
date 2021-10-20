@@ -42,11 +42,7 @@ class _MainNavigationState extends State<MainNavigation> {
       body: tabs[_currentIndex],
       bottomNavigationBar: new Theme(
         data: Theme.of(context).copyWith(
-            canvasColor: Colors.white,
-            textTheme: Theme
-                .of(context)
-                .textTheme
-                .copyWith(caption: new TextStyle(color: Colors.white))
+            canvasColor: Colors.white, //Background Menu
         ),// sets the inactive color of the `BottomNavigationBar`
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
@@ -59,22 +55,18 @@ class _MainNavigationState extends State<MainNavigation> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.add_box_rounded),
                 label: 'Novo',
-                backgroundColor: Colors.red
             ),
             BottomNavigationBarItem(
                 icon: Icon(Icons.event),
                 label: 'Eventos',
-                backgroundColor: Colors.red
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.search),
               label: 'Amigos',
-              backgroundColor: Colors.red,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.perm_identity_outlined),
               label: 'Perfil',
-              backgroundColor: Colors.red,
             ),
           ],
           onTap: (index){

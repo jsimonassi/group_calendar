@@ -30,10 +30,6 @@ class _HomeState extends State<Home> {
             children: [
               Expanded(child: Container()),
               Container(
-                margin: EdgeInsets.only(
-                  top: 30,
-                  left: 30
-                ),
                 child: Image.asset("assets/images/no_event_logo.png"),
               ),
               Container(

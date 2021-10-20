@@ -3,6 +3,7 @@ import 'package:calendar/constants/Colors.dart';
 import 'package:flutter/material.dart';
 
 import 'MainNavigation.dart';
+import 'SignUp.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -18,6 +19,10 @@ class _LoginState extends State<Login> {
   login(){
     //Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (BuildContext context) => MainNavigation()), (Route<dynamic> route) => false);
     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => MainNavigation()));
+  }
+
+  createAccount() {
+    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SignUp()));
   }
 
 
@@ -137,13 +142,16 @@ class _LoginState extends State<Login> {
                     child: new MainButton("ENTRAR", login),
                   ),
 
-                  Container(
-                    width: size.width,
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(top: 25),
-                    child: Text(
-                      "Não tem uma conta? Cadatre-se!",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                  GestureDetector(
+                    onTap: createAccount,
+                    child: Container(
+                      width: size.width,
+                      alignment: Alignment.center,
+                      margin: EdgeInsets.only(top: 25),
+                      child: Text(
+                        "Não tem uma conta? Cadatre-se!",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
                   )
                 ],
